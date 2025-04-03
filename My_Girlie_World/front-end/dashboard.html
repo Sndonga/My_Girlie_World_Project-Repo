@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+   <html lang="en"> 
+       <!-- dashboard.html -->
+       <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Kenya's cutest coquette fashion store. Shop kawaii dresses, bows, and accessories in Nairobi.">
+            <meta name="keywords" content="kawaii fashion kenya, coquette dresses nairobi, cute accessories">
+            <title>dashboard | My Girlie World</title>
+            <link rel="stylesheet" href="front-end/style.css">
+       </head>
+       <body>
+           <nav class="navbar">...</nav>
+           <div class="dashboard">
+                <h2>My Profile</h2>
+                <div id="user-greeting"></div>
+              <!-- Other dashboard content -->
+           </div>
+            <script>
+               // Show logged-in user
+               const user = JSON.parse(localStorage.getItem('user'));
+               if (!user) window.location.href = 'login.html'; // Redirect if not logged in
+                document.getElementById('user-greeting').innerHTML = `
+                <p>Hello, ${user.name}! ✨</p>`;
+          </script>
+          <script src="js/avatar.js"></script>
+         </body>
