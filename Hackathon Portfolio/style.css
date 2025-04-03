@@ -212,7 +212,40 @@ textarea {
 .divider {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200,0H0V120H1200Z" fill="%23E07A5F" opacity="0.2"/></svg>'); /* Terracotta wave */
 }
-
+/* ===== Welcome Animation ===== */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary); /* Terracotta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .welcome-content {
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Hides after animation */
+  .hide-welcome {
+    animation: fadeOut 0.5s forwards;
+  }
+  
+  @keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+  }
 /* ===== Footer ===== */
 footer {
     background-color: var(--text); /* Deep navy footer */
