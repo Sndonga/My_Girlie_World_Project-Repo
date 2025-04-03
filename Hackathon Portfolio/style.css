@@ -1,10 +1,10 @@
 /* ===== Base Styles ===== */
 :root {
-    --navy-blue: #001f3f;
-    --gold: #FFD700;
-    --white: #FFFFFF;
-    --light-gray: #f4f4f4;
-}
+    --primary: #E07A5F;    /* Terracotta */
+    --accent: #88B7B5;     /* Soft Teal */
+    --background: #F2E8CF;  /* Oatmeal */
+    --text: #3D405B;       /* Deep Navy (text) */
+  }
 
 body {
     font-family: 'EB Garamond', serif;
@@ -16,6 +16,11 @@ body {
 }
 
 /* ===== Typography ===== */
+
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     color: var(--navy-blue);
@@ -43,12 +48,14 @@ h2::after {
 }
 
 /* ===== Header & Navigation ===== */
-header {
-    background-color: var(--navy-blue);
-    color: var(--white);
-    padding: 2rem 0;
-    text-align: center;
-}
+
+h1 {
+    background: linear-gradient(45deg, #B4869F, #E07A5F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 3s infinite;
+  }
 
 nav ul {
     list-style: none;
@@ -276,6 +283,13 @@ textarea {
     color: var(--warm-brown);
     margin-top: 0.5rem;
 }
+.divider {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200,0H0V120H1200Z" fill="%23D4A5A5" opacity="0.2"/></svg>');
+    height: 20px;
+  }
+  body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23E07A5F"/></svg>'), auto;
+  } 
 /* ===== Footer ===== */
 footer {
     text-align: center;
