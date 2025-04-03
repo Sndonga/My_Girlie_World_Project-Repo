@@ -1,3 +1,0 @@
-/*
-  Cache-Control: no-transform
-  X-Frame-Options: DENY
