@@ -1,0 +1,8 @@
+[build]
+  command = "echo 'No build needed'"
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-transform" # Prevents minification
