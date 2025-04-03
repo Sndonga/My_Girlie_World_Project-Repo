@@ -73,7 +73,40 @@ nav a:hover {
     background: var(--light-gray); /* Light oatmeal cards */
     border: 1px solid rgba(61, 64, 91, 0.1); /* Subtle border */
 }
+/* ===== Skills Grid ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
+.skill-card {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--primary); /* Terracotta icons */
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    color: var(--text); /* Deep navy text */
+    font-weight: 600;
+}
 /* ===== Buttons ===== */
 .btn-gold {
     background: var(--primary); /* Terracotta button */
