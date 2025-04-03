@@ -196,12 +196,15 @@ textarea {
     background: var(--primary); /* Terracotta button */
     color: var(--white);
 }
-
-.btn-gold:hover {
-    background: var(--accent); /* Soft teal hover */
-    color: var(--text);
+.logo-swn {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--text); /* Deep navy */
+    text-shadow: 
+        0 0 5px var(--primary), /* Terracotta glow */
+        0 0 10px var(--accent); /* Teal glow */
+    letter-spacing: 2px;
 }
-
 /* ===== Mission Statement ===== */
 .mission-statement {
     background: var(--accent); /* Soft teal background */
