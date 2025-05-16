@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+sys.path.append(r'C:\Users\HP\OneDrive\Desktop\My_Girlie_World_Project-Repo\MGW_Back-end_Logic')
 
 def main():
     """Run administrative tasks."""
