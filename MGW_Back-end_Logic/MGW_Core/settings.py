@@ -1,10 +1,16 @@
 import os
 from pathlib import Path
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 
 load_dotenv()  # Load .env
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent  # Points to mgw_core folder
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR.parent.parent, 'frontend/static'),  # Goes up 2 levels
+]
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
@@ -79,3 +85,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Add at the bottom
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '../../frontend/static'), 
+]
