@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Girlie_World | Kawaii & Elegant Fashion</title>
+    <link rel="stylesheet" href="Frontend_Code\static\style.css">
+    <link rel="icon" href="Documentation\Design & Branding\MGW Logo Design Drafts\My_Girlie_World Logo 1.svg">
+</head>
+<body>
+    <!-- ===== NAVIGATION BAR ===== -->
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="Documentation\Design & Branding\MGW Logo Design Drafts">My_Girlie_World</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="login-btn">Login</button>
+                <button id="signup-btn">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>🌸 Kawaii Meets Kenyan Elegance</h1>
+            <p>Discover your perfect blend of playful and polished with "Magic", your AI stylist!</p>
+            <button class="cta-button">Shop Now</button>
+        </div>
+        <!-- [ADJUST] Replace placeholder with your hero image -->
+        <div class="hero-image">
+            <img src="Documentation\Design & Branding\MGW Website Image\5d8c1492-8dca-4ad0-a0e1-919e0b10ec31.jpg" alt="Elegance and Feminine">
+        </div>
+    </section>
+
+    <!-- ===== SIGNUP/LOGIN MODALS ===== -->
+    <!-- Signup Form -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Join My_Girlie_World</h2>
+            <form id="signup-form">
+                <!-- [ADJUST] Add backend action later -->
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Welcome Back!</h2>
+            <form id="login-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== FEATURED PRODUCTS ===== -->
+    <section id="products" class="featured-products">
+        <h2>Featured Kawaii Picks</h2>
+        <div class="product-grid">
+            <!-- [ADJUST] Dynamically load products via JavaScript later -->
+            <div class="product-card">
+                <img src="Frontend_Code\static\Website clothes & shoes\e1bc8d21-7809-4e66-9e1d-057d2c72cef0.jpg" alt="Pastel Dress">
+                <h3>Pastel Ankara Dress</h3>
+                <p>KSh 1,499</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+             <div class="product-card">
+                <img src="Frontend_Code\static\Website clothes & shoes\f122390d-4f41-42df-b044-98b5da7f4e17.jpg" alt="Beautiful kawaii dress">
+                <h3>Floral print summer dress</h3>
+                <p>Ksh 1,500</p>
+                <button class="add-to-cart">Add to Cart</button>                
+             </div>
+             <div class="product-card">
+                <img scr="Frontend_Code\static\Website clothes & shoes\9358ad63-84f2-441b-8070-2ab8146f78bb.jpg" alt="Formal, cute dress">
+                <h3>Formal cute dress</h3>
+                <p>Ksh 1,200</p>
+                <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card">
+                <img src="Frontend_Code\Website clothes & shoes\#heels #heelsaddict #fashion #chunky.jpg" alt="Amazing stylish heels">
+                <h3>Amazing stylish heels</h3>
+                <p>Ksh. 1,600</p>
+             </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT US ===== -->
+    <section id="about" class="about">
+        <h2>About My_Girlie_World</h2>
+        <p>Born in Nairobi, MGW celebrates the fusion of African touch and Japanese kawaii culture.</p>
+        <div class="contact-info">
+            <!-- [ADJUST] Add your real contact details -->
+            <p>📧 Email: <a href="mailto:hello@mygirlieworld.co.ke">hello@mygirlieworld.co.ke</a></p>
+            <p>📞 Phone: +254 747947706</p>
+            <div class="social-links">
+                <a href="#"><img src="assets/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/tiktok-icon.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2025 My_Girlie_World. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // [ADJUST] Add functionality later
+        // Modal toggle logic
+        const signupBtn = document.getElementById('signup-btn');
+        const loginBtn = document.getElementById('login-btn');
+        const signupModal = document.getElementById('signup-modal');
+        const loginModal = document.getElementById('login-modal');
+        const closeBtns = document.querySelectorAll('.close');
+
+        signupBtn.onclick = () => signupModal.style.display = 'block';
+        loginBtn.onclick = () => loginModal.style.display = 'block';
+        closeBtns.forEach(btn => {
+            btn.onclick = () => {
+                signupModal.style.display = 'none';
+                loginModal.style.display = 'none';
+            };
+        });
+
+        // Close modal when clicking outside
+        window.onclick = (event) => {
+            if (event.target === signupModal) signupModal.style.display = 'none';
+            if (event.target === loginModal) loginModal.style.display = 'none';
+        };
+    </script>
+   
+    <script src="{% Frontend_Code\static\AI_Assistant.js %}"></script>
+</body>
+</html>
