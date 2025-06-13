@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 load_dotenv()  # Load .env
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +31,7 @@ DATABASES = {
 
 # Static files (CSS, JS, images)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '../frontend/static')] # type: ignore
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '../Frontend_Code/static')] # type: ignore
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -45,7 +45,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%e(pwuo6ar0!2ok87cey!fw7yp=-08_&ufv$jc@iyov3h2q4e+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -76,7 +76,7 @@ ROOT_URLCONF = 'mgw_core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR.parent, 'frontend/templates')],
+        'DIRS': [os.path.join(BASE_DIR.parent, 'Frontend_Code/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

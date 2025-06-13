@@ -1,5 +1,5 @@
-from rest_framework import generics
-from rest_framework.response import Response
+from rest_framework import generics # type: ignore
+from rest_framework.response import Response # type: ignore
 from typing import List
 from .models import Product
 from .serializers import ProductSerializer # type: ignore
